@@ -1,0 +1,143 @@
+
+<!-- saved from url=(0025)https://www.coolstar.org/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CoolStar's Website</title>
+<link href="./index_files/css" rel="stylesheet" type="text/css">
+<style type="text/css">
+		body {
+			background: #007180; /* Old browsers */
+			background: -moz-linear-gradient(top,  #007180 0%, #cbddc8 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007180), color-stop(100%,#cbddc8)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #007180 0%,#cbddc8 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #007180 0%,#cbddc8 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #007180 0%,#cbddc8 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #007180 0%,#cbddc8 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007180', endColorstr='#cbddc8',GradientType=0 ); /* IE6-9 */
+			font-family: "Segoe UI Light", "Ubuntu", "Helvetica Neue Ultralight", "Calibri Light";
+			/*text-shadow: 1px 1px rgba(0,0,0,0.5);*/
+			overflow:hidden;
+		}
+		h1 {
+			font-weight: normal;
+		}
+		h3 {
+			font-weight: normal;
+		}
+		h4 {
+			font-weight: normal;
+		}
+		a {
+			text-decoration: none;
+		}
+		.bg-img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top:0px;
+			left:0px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+		.blur {
+			-webkit-filter: blur(5px);
+			-moz-filter: blur(5px);
+			-o-filter: blur(5px);
+			-ms-filter: blur(5px);
+			filter: blur(5px);
+		}
+		.overlay {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+		.dropmenu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropmenu-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            min-width: 199px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropmenu-content a {
+            color: #fff;
+            padding: 12px 8px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .dropmenu-content a small {
+            margin-left: 10px;
+        }
+
+        .dropmenu-content a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dropmenu:hover .dropmenu-content {
+            display: block;
+        }
+
+        .dropmenu:hover .btn { opacity: 0.8; }
+		</style>
+<script type="text/javascript">
+		function swapBG(){
+			document.getElementById("bg-img").style.display="block";
+			document.getElementById("bg-img").style.backgroundImage="url('landscape.jpg')";
+			document.getElementById("bg-overlay").style.display="block";
+			document.getElementById("ios").style.color="rgb(0,200,64)";
+			document.getElementById("chrome").style.color="rgb(255,91,0)";
+			document.body.style.color = "white";
+		}
+		function swapForURL(){
+			document.getElementById("logo").src="dva-avatar.jpg";
+			document.getElementById("logo").style.borderRadius="50px";
+			document.getElementById("bg-img").style.display="block";
+			document.getElementById("bg-img").style.backgroundImage="url('dva-genji.jpg')";
+			document.getElementById("bg-overlay").style.display="block";
+			document.getElementById("ios").style.color="rgb(0,200,64)";
+			document.getElementById("chrome").style.color="rgb(255,91,0)";
+			document.body.style.color = "white";
+		}
+		function getLocation(href) {
+			var match = href.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)(\?[^#]*|)(#.*|)$/);
+			return match && {
+				protocol: match[1],
+				host: match[2],
+				hostname: match[3],
+				port: match[4],
+				pathname: match[5],
+				search: match[6],
+				hash: match[7]
+			}
+		}
+		</script>
+</head>
+<body scroll="no" style="color: white;">
+<div id="bg-img" class="bg-img blur" style="display: block; background-image: url(&quot;bg.jpg&quot;);"></div>
+<div id="bg-overlay" class="bg-img overlay" style="display: block;"></div>
+<div style="width: 100%; height: 100%;display: table;text-align: center;">
+<div style="position:relative;width:700px;height:500px;display: table-cell;vertical-align: middle; top: -7%;">
+
+<h1>Bao-Zheng</h1>
+<h3>iOS, Windows and Linux Developer.</h3>
+<span id="links">
+<a href="https://nbbaozheng.github.io/SQlitor/" id="ios" style="color: rgb(0, 200, 64);">SQLitor</a>
+</span>
+</div>
+</div>
+
+<script type="text/javascript">
+		var urlObj = getLocation(document.documentURI);
+		if (urlObj.host.toLowerCase().indexOf("coolstar.moe") >= 0)
+			swapForURL();
+		else
+			swapBG();
+	</script>
+</body></html>
