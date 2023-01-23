@@ -1,56 +1,40 @@
-<!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
-    <title>Bao-Zheng's Website</title>
-    <style>
-        body{
-            background-color: black;
-        }
-        h1,h3{
-            color: white;
-            
-        }
-    </style>
+
+<head>
+    <title>Bao-Zheng个人主页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+    <link href="css/index.css" rel="stylesheet">
     <script>
-        window.onload=function(){
-            var story = document.getElementById('word');
-            var s = document.getElementById('show');
-            
-            var i = 0;
-            timer=setInterval(function(){
-                s.innerHTML=story.innerHTML.substring(0,i);
-                i++;
-                if(s.innerHTML==story.innerHTML){
-                    clearInterval(timer);
-                    $("#show2").hide()
-                    document.getElementById("show2").innerHTML = "A Student & Programmer"
-                    $("#show2").fadeIn()
-                }
-            },200);
-
-
-
-        }
+$(document).ready(function(){
+    $(".max").fadeIn()
+})
+function ongotoblog(){
+    window.loaction = 'https://blog.bao-zheng.xyz/'
+}
+function ongotodonate(){
+    window.location = 'https://paypal.me/BDrive18650/'
+}
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top"  style="background-color:black;width:100%;">
-        <span class="navbar-text" align="center">
-            <h4>Bao-Zheng's Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-        </span>
-        <ul class="nav nav-pills pull-right">
-            <li class="nav-item" align="right"><a href="#" class="btn btn-outline-light blue pull-right" aria-current="page">Home</a></li>
-            &nbsp;&nbsp;
-            <li class="nav-item"><a href="https://paypal.me/BDrive18650" class="btn btn-outline-light blue pull-right">Donate</a></li>
-          </ul>
-    </nav>
-    <div class="air" style="height:40vh;width:100%;"></div>
-    <p id="word" align="center" style="display:none;">Bao-Zheng</p>
-    <h1 id="show" align="center"></h1>
-    <h3 id="show2" align="center" style="color:white"></h3>
+    <div class="bg-img"></div>
+    <div class="navbar">
+        <div class="container">
+            <div class="name">Bao-Zheng</div>
+            <div align="right" class="buttons">
+                <button type="button" class="btn" onclick="ongotoblog()">博客</button>
+                <button type="button" class="btn" onclick="ongotodonate()">捐助</button>
+            </div>
+        </div>
+    </div>
+    <div class="air"></div>
+    <div class="center">
+        <div align="center" style="display: none;" class="max">心如止水</div>
+        <div align="center" class="line"></div>
+    </div>
+    <div class="air"></div>
 </body>
+
 </html>
